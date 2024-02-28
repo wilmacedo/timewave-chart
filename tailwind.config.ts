@@ -8,10 +8,18 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      animation: {
+        "show-box": "show .4s ease-out forwards",
+      },
+      keyframes: {
+        show: {
+          "0%": {
+            transform: "none",
+          },
+          "100%": {
+            transform: "translate(-5px, 5px)",
+          },
+        },
       },
     },
   },
