@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       animation: {
-        "show-box": "show .4s ease-out forwards",
+        "show-box": "show 1s ease-out forwards",
       },
       keyframes: {
         show: {
