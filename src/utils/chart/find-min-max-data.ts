@@ -1,6 +1,10 @@
 import { PriceChartData } from "@/components/charts/price-chart";
 
 export function findMinMaxData(data: PriceChartData[]) {
+  if (data.length === 0) {
+    return { min: 0, max: 0 };
+  }
+
   let overallMin = Number.MAX_VALUE;
   let overallMax = Number.MIN_VALUE;
 

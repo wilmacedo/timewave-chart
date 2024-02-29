@@ -1,6 +1,10 @@
 import { PriceChartData } from "@/components/charts/price-chart";
 
 export function findAvgData(data: PriceChartData[]) {
+  if (data.length === 0) {
+    return 0;
+  }
+
   let totalPrices = 0;
   let totalCount = 0;
 
