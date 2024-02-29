@@ -17,7 +17,7 @@ export default async function Main() {
 
   return (
     <main className="pt-14 px-8 md:px-16 sm:pt-20">
-      <div className="w-full mx-auto lg:max-w-5xl space-y-8">
+      <div className="text-center md:text-left w-full mx-auto lg:max-w-5xl space-y-8">
         <Box>
           <h3 className="color-[#242424] font-bold text-xl">
             Value Comparison
@@ -25,7 +25,7 @@ export default async function Main() {
 
           <PriceLegend data={formattedData} />
 
-          <div className="h-[350px] w-full">
+          <div className="-ml-8 w-[105%] h-[350px] md:ml-0 md:w-full">
             <PriceChart data={formattedData} />
           </div>
 
