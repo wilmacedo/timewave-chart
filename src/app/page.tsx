@@ -1,7 +1,8 @@
 import { Box } from "@/components/box";
+import { ChartFooter } from "@/components/charts/chart-footer";
 import { PriceChart } from "@/components/charts/price-chart";
 import { PriceLegend } from "@/components/charts/price-legend";
-import { CHAIN_ID, tokens } from "@/config/mock";
+import { CHAIN_ID, TIME_RANGE, tokens } from "@/config/mock";
 import { getChartData } from "@/services/get-chart-data";
 import { formatPriceData } from "@/utils/chart/format-price-data";
 
@@ -9,7 +10,7 @@ export default async function Main() {
   const data = await getChartData({
     chainId: CHAIN_ID,
     tokenPair: [Object.keys(tokens)[0], Object.keys(tokens)[1]],
-    range: "D7",
+    range: TIME_RANGE,
   });
 
   const formattedData = formatPriceData(data.result.data.json);
@@ -27,6 +28,8 @@ export default async function Main() {
           <div className="h-[350px] w-full">
             <PriceChart data={formattedData} />
           </div>
+
+          <ChartFooter range={TIME_RANGE} />
         </Box>
       </div>
     </main>
