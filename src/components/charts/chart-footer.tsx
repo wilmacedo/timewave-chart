@@ -10,7 +10,7 @@ export function ChartFooter({ range }: ChartFooterProps) {
       <input
         className="w-6 text-center h-7 p-1 font-bold text-[#242424] disabled:cursor-not-allowed disabled:opacity-70"
         disabled
-        defaultValue={days}
+        value={days}
       />
 
       <span className="py-1.5 px-2 bg-[#242424] text-[#EFEFEF] font-bold">
