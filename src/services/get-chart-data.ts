@@ -24,7 +24,7 @@ interface ChartDataResponse {
   };
 }
 
-function buildApiInput({ tokenPair, range, chainId }: ChartDataProps) {
+export function buildApiInput({ tokenPair, range, chainId }: ChartDataProps) {
   const input = {
     json: {
       tokens: tokenPair,
